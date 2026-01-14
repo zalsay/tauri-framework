@@ -1,0 +1,51 @@
+{
+  "name": "@auto-tauri/framework",
+  "version": "1.0.0",
+  "description": "Auto Tauri Framework - Share Tauri app wrapper and agent binaries across projects",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/",
+    "binaries/"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "build:binaries": "node scripts/build-binaries.js",
+    "prepare": "npm run build && npm run build:binaries",
+    "clean": "rm -rf dist binaries",
+    "prepublishOnly": "npm run build && npm run build:binaries",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "tauri",
+    "automation",
+    "framework",
+    "hyperagent",
+    "xhs-agent"
+  ],
+  "author": "Auto Tauri",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/auto-tauri-framework"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
+  "cpu": [
+    "x64",
+    "arm64"
+  ],
+  "peerDependencies": {
+    "@tauri-apps/api": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}

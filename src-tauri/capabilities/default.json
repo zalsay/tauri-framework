@@ -1,0 +1,59 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Capability for the main window",
+  "windows": ["main"],
+  "permissions": [
+    "core:default",
+    "opener:default",
+    "shell:allow-execute",
+    {
+      "identifier": "shell:allow-execute",
+      "allow": [
+        {
+          "name": "binaries/hyperagent",
+          "sidecar": true,
+          "args": []
+        },
+        {
+          "name": "binaries/xhs-agent",
+          "sidecar": true,
+          "args": []
+        }
+      ]
+    },
+    "shell:allow-spawn",
+    {
+      "identifier": "shell:allow-spawn",
+      "allow": [
+        {
+          "name": "binaries/hyperagent",
+          "sidecar": true,
+          "args": []
+        },
+        {
+          "name": "binaries/xhs-agent",
+          "sidecar": true,
+          "args": []
+        }
+      ]
+    },
+    "shell:allow-stdin-write",
+    {
+      "identifier": "shell:allow-stdin-write",
+      "allow": [
+        {
+          "name": "binaries/hyperagent",
+          "sidecar": true,
+          "args": []
+        },
+        {
+          "name": "binaries/xhs-agent",
+          "sidecar": true,
+          "args": []
+        }
+      ]
+    },
+    "shell:allow-open"
+  ]
+}
