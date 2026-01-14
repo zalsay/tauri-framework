@@ -4,10 +4,10 @@
   "version": "0.1.0",
   "identifier": "1277",
   "build": {
-    "beforeDevCommand": "npm run dev",
+    "beforeDevCommand": "cd ../../desktop && npm run dev",
     "devUrl": "http://localhost:1420",
-    "beforeBuildCommand": "npm run build",
-    "frontendDist": "../dist"
+    "beforeBuildCommand": "cd ../../desktop && npm run build",
+    "frontendDist": "../../desktop/dist"
   },
   "app": {
     "windows": [
